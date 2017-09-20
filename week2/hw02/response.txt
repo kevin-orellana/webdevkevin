@@ -1,0 +1,9 @@
+The article offers advice on the important of good planning in web development. 
+It offers tips for a web development project manager throughout the various stages of a site's development process. 
+Some of these tips are meant to save time but others are more fundamental, such as understanding the purpose of the site hollistically.
+This approach to "understanding the big picture" is directly linked to the idea that the site must provide the best experience for the client. 
+While this may appear as common sense to any project manager creating a site for her clients, it serves as guide for problem-solving.
+This idea of client-orientated experience creation extends into the realm of user experience. 
+The article also highlights the importance of understanding the job's in the site's production process. Such mindfulness may reduce unnecessary
+overhead costs. For example, while a graphic designer may require high fidelity mock ups, a back-end web developer may only require a general
+notion of the site's layout. 
