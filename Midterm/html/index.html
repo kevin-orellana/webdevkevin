@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	 <meta charset="UTF-8"/>
+	    <meta name="Description" content="Multi-platform news center"/>
+	    <meta name="keywords" content="news, center, custom, independent"/>
+	    <meta name="Kevin Orellana" content="Newsreel Proof of Concept"/>
+		<meta name="viewport" content="width=device-width">
+    	<link rel="stylesheet" href="../CSS/style.css">
+    	<!-- Auto refresh -->
+		<!-- <meta http-equiv="refresh" content="3"> -->
+		<!-- Font awesome -->
+		<script src="https://use.fontawesome.com/a63e821bb2.js"></script>	
+		<!-- JavaScript file -->
+		<script type="text/javascript" src="../JavaScript/jquery-3.2.1.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+		
+
+	<title>Newsreel
+	</title>
+</head>
+<body>
+
+	<div id="overlay"></div>
+	<!-- Logo -->
+
+	<!-- Navigation Bar -->
+	<nav id="navigation">  <!-- This must be made responsive -->
+
+		<div id="menuDiv">
+			<button type="button" id="menu5">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+		<!-- </div> -->
+
+
+		<h1>Newsreel</h1>
+		<ul id="sections">
+			<li><a href="#">World</a></li>
+			<li><a href="#">US</a></li>
+			<li><a href="#">Tech</a></li>
+			<li><a href="story.html">Story Page</a></li>
+
+		</ul>
+	</div>
+	</nav>
+
+	<!-- MENU SECTION -->
+	<div id="menuSection">
+		<a href="index.html" class="active">Home</a>
+		<a href="#">For you</a>
+		<a href="#">Share</a>
+		<a href="#">Account</a>
+		<a href="#">Settings</a>
+
+
+	</div>
+
+	<div class="popUp">
+		</div>
+
+	<!-- Article section -->
+	<div class="articleSection">
+		<!-- Articles will be added here using JQuery -->
+	</div>
+
+	<div class="videoSection">
+		<div id="stock">
+			<!-- TradingView Widget BEGIN -->
+			<span id="tradingview-copyright"><a ref="nofollow noopener" target="_blank" href="http://www.tradingview.com" style="color: rgb(173, 174, 176); font-family: &quot;Trebuchet MS&quot;, Tahoma, Arial, sans-serif; font-size: 13px;">Market Quotes by <span style="color: #3BB3E4">TradingFView</span></a></span>
+			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js">
+			{
+			  "showChart": true,
+			  "locale": "en",
+			  "width": "340",
+			  "height": "660",
+			  "plotLineColorGrowing": "rgba(0, 0, 255, 1)",
+			  "plotLineColorFalling": "rgba(255, 74, 104, 1)",
+			  "gridLineColor": "rgba(233, 233, 234, 1)",
+			  "scaleFontColor": "rgba(218, 221, 224, 1)",
+			  "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
+			  "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
+			  "symbolActiveColor": "rgba(242, 250, 254, 1)",
+			  "tabs": [
+			    {
+			      "title": "Equities",
+			      "symbols": [
+			        {
+			          "s": "INDEX:SPX",
+			          "d": "S&P 500"
+			        },
+			        {
+			          "s": "INDEX:IUXX",
+			          "d": "Nasdaq 100"
+			        },
+			        {
+			          "s": "INDEX:DOWI",
+			          "d": "Dow 30"
+			        },
+			        {
+			          "s": "INDEX:NKY",
+			          "d": "Nikkei 225"
+			        },
+			        {
+			          "s": "NASDAQ:AAPL",
+			          "d": "Apple"
+			        },
+			        {
+			          "s": "NASDAQ:GOOG",
+			          "d": "Google"
+			        }
+			      ]
+			    },
+			    {
+			      "title": "Commodities",
+			      "symbols": [
+			        {
+			          "s": "CME_MINI:ES1!",
+			          "d": "E-Mini S&P"
+			        },
+			        {
+			          "s": "CME:E61!",
+			          "d": "Euro"
+			        },
+			        {
+			          "s": "COMEX:GC1!",
+			          "d": "Gold"
+			        },
+			        {
+			          "s": "NYMEX:CL1!",
+			          "d": "Crude Oil"
+			        },
+			        {
+			          "s": "NYMEX:NG1!",
+			          "d": "Natural Gas"
+			        }
+			      ]
+			    },
+			    {
+			      "title": "Forex",
+			      "symbols": [
+			        {
+			          "s": "FX:EURUSD"
+			        },
+			        {
+			          "s": "FX:GBPUSD"
+			        },
+			        {
+			          "s": "FX:USDJPY"
+			        },
+			        {
+			          "s": "FX:USDCHF"
+			        },
+			        {
+			          "s": "FX:AUDUSD"
+			        },
+			        {
+			          "s": "FX:USDCAD"
+			        }
+			      ]
+			    }
+			  ]
+			}
+			</script>
+			<!-- TradingView Widget END --></div>
+
+		<div id="stock2"> <!-- TradingView Widget BEGIN -->
+			<span id="tradingview-copyright"><a ref="nofollow noopener" target="_blank" href="http://www.tradingview.com" style="color: rgb(173, 174, 176); font-family: &quot;Trebuchet MS&quot;, Tahoma, Arial, sans-serif; font-size: 13px;">Market Quotes by <span style="color: #3BB3E4">TradingView</span></a></span>
+			<script src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js">{
+			  "width": "770",
+			  "height": "400",
+			  "locale": "en",
+			  "symbolsGroups": [
+			    {
+			      "symbols": [
+			        {
+			          "displayName": "S&P 500",
+			          "name": "INDEX:SPX"
+			        },
+			        {
+			          "displayName": "Nasdaq 100",
+			          "name": "INDEX:IUXX"
+			        },
+			        {
+			          "displayName": "Dow 30",
+			          "name": "INDEX:DOWI"
+			        },
+			        {
+			          "displayName": "Nikkei 225",
+			          "name": "INDEX:NKY"
+			        },
+			        {
+			          "displayName": "Apple",
+			          "name": "NASDAQ:AAPL"
+			        },
+			        {
+			          "displayName": "Google",
+			          "name": "NASDAQ:GOOG"
+			        }
+			      ],
+			      "name": "Equities"
+			    },
+			    {
+			      "symbols": [
+			        {
+			          "displayName": "E-Mini S&P",
+			          "name": "CME_MINI:ES1!"
+			        },
+			        {
+			          "displayName": "Euro",
+			          "name": "CME:E61!"
+			        },
+			        {
+			          "displayName": "Gold",
+			          "name": "COMEX:GC1!"
+			        },
+			        {
+			          "displayName": "Crude Oil",
+			          "name": "NYMEX:CL1!"
+			        },
+			        {
+			          "displayName": "Natural Gas",
+			          "name": "NYMEX:NG1!"
+			        },
+			        {
+			          "displayName": "Corn",
+			          "name": "CBOT:ZC1!"
+			        }
+			      ],
+			      "name": "Commodities"
+			    },
+			    {
+			      "symbols": [
+			        {
+			          "displayName": "Eurodollar",
+			          "name": "CME:GE1!"
+			        },
+			        {
+			          "displayName": "T-Bond",
+			          "name": "CBOT:ZB1!"
+			        },
+			        {
+			          "displayName": "Ultra T-Bond",
+			          "name": "CBOT:UD1!"
+			        },
+			        {
+			          "displayName": "Euro Bund",
+			          "name": "EUREX:GG1!"
+			        },
+			        {
+			          "displayName": "Euro BTP",
+			          "name": "EUREX:II1!"
+			        },
+			        {
+			          "displayName": "Euro BOBL",
+			          "name": "EUREX:HR1!"
+			        }
+			      ],
+			      "name": "Bonds"
+			    },
+			    {
+			      "symbols": [
+			        {
+			          "name": "FX:EURUSD"
+			        },
+			        {
+			          "name": "FX:GBPUSD"
+			        },
+			        {
+			          "name": "FX:USDJPY"
+			        },
+			        {
+			          "name": "FX:USDCHF"
+			        },
+			        {
+			          "name": "FX:AUDUSD"
+			        },
+			        {
+			          "name": "FX:USDCAD"
+			        }
+			      ],
+			      "name": "Forex"
+			    }
+			  ]
+			}</script>
+			<!-- TradingView Widget END --></div>
+
+		<div id="weather">
+			<iframe src="https://www.meteoblue.com/en/weather/widget/three/new-york_united-states-of-america_5128581?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&layout=bright"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups" style="width: 390px;height: 400px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/forecast/week/new-york_united-states-of-america_5128581?utm_source=weather_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a></div>
+		</div>
+
+	</div>
+<div id="images"></div>
+
+<!-- Footer -->
+<footer>
+	<div class="footerWrapper">
+		<div id="footerSections">
+		<div>
+			<h5>Sign up for our newsletter</h5>
+			<input type="text" name="emailaddress" value="your@emailaddress.com">
+		  		<input type="submit" value="Submit">
+		</div>
+
+		<div>
+		<h5>Content Disclaimer </h5><p> The content provided on Newsreel is copyright property of third-party sources. For a complete list of third-party content providers, see the Copyrights page. </p>
+		</div>
+
+		<div>
+		<h5>Stay Connected</h5>
+		<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+	</div>
+		</div>
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Copyrights</a></li>
+			<li><a href="sitemap.html">Sitemap</a></li>
+			<li><a href="story.html">Contact</a></li>
+
+		</ul>
+	</div>
+</footer>
+<script type="text/javascript" src="../JavaScript/javascript.js"></script>
+</body>
+</html>
