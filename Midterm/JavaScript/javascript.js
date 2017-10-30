@@ -30,7 +30,7 @@ $(window).on("scroll", function() {
 	var scrollPosition = $(window).height() + $(window).scrollTop();
 	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 		console.log("BOTTOM");
-		if (countAdditions == 5){
+		if (countAdditions == 2){
 			return false;
 		}
 		else if (countAdditions == 0){
