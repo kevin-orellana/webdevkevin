@@ -1,3 +1,4 @@
+// declaration of global variables
 var JSONData;
 var query;
 var btn;
@@ -9,6 +10,7 @@ var url4 = " https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=e7
 var countAdditions = 0;
 var popUpGlobal;
 
+// adds an event listener to HTML site, once loaded will run the API calls.
 document.addEventListener("DOMContentLoaded", function(){
 	menu5 = document.getElementById("menu5");
 	menu5.addEventListener("click", revealMenu);
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	loadPictures();
 
 });
-
+// adds new articles based on scroll position
 $(window).on("scroll", function() {
 	var scrollHeight = $(document).height();
 	var scrollPosition = $(window).height() + $(window).scrollTop();
