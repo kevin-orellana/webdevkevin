@@ -1,4 +1,4 @@
-var NYT;
+var JSONData;
 var query;
 var btn;
 var menu5;
@@ -7,11 +7,9 @@ var url2 = "https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top
 var url3 = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=e7dcfbfa99934c0c8b670bda03ab8394";
 var url4 = " https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=e7dcfbfa99934c0c8b670bda03ab8394";
 var countAdditions = 0;
-
 var popUpGlobal;
 
 document.addEventListener("DOMContentLoaded", function(){
-	//this is where we put ALLLLLLLL event listeners or anythign we need to get by id
 	menu5 = document.getElementById("menu5");
 	menu5.addEventListener("click", revealMenu);
 	$("#popUp").mouseleave(hidePopUp);
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			$("#menuSection").fadeOut("shlow")
 		});
 
-	//loadArticles();
 	loadArticles();
 	loadPictures();
 
@@ -43,24 +40,24 @@ $(window).on("scroll", function() {
 		countAdditions++;
 		}
 
-	    // when scroll to bottom of the page
 	}
 })
+
+// changes visibility of menu
 function revealMenu(){
 	$("#menuSection").fadeIn("slow");
-	
 }
 
+// changes visibility of background overlay
 function overlay(){
 	document.getElementById("overlay").style.display = "block";
-	// document.getElementById("overlay").fadeIn("slow");
 }
 
 function hideOverlay(){
-	// document.getElementById("overlay").		fadeOut("slow");
 	document.getElementById("overlay").style.display = "none";
 }
 
+//hides the popup iframe
 function hidePopUp(){
 	popUpGlobal = document.getElementByClassName("popUp");
 		while (popUpGlobal.firstChild) {
@@ -69,6 +66,7 @@ function hidePopUp(){
 		console.log("CLEARING");
 }
 
+// prints article titles in console
 function printTitles(JSONObjectList){
 	var count = 0;
 	$.each(JSONObjectList.articles, function(key, value){
@@ -81,56 +79,7 @@ function printTitles(JSONObjectList){
 		});
 }
 
-function explode(search_query){
-	console.log(search_query);
-	query = search_query;
-
-}
-
-function addTitlesToArticleSection(JSONObjectList){
-	var count = 0;
-	$.each(JSONObjectList.articles, function(key, value){
-			// console.log(key + ": " + value.title);
-			// Adds data.articles[i].title to ArticlesSection as article class
-			$( ".articleSection" ).append(
-			// ARTICLE BEGIN
-			"<article class='article'>" + 
-
-			"<p class='articleContent'>" + 	
-			//ARTICLE LINK
-			"<a href=\'" +
-				value.url +
-					"\' target=\'_blank\'	>" + 
-				"<img class='articleImg' src=\'" + 
-					value.urlToImage + 
-						"\' alt='article pic'>" + 
-			//END ARTICLE LINK
-			"</a>" + 
-			// ARTICLE DESCRIPTION 
-			/* "<p class='articleContent'>" + 	*/
-			value.description +
-			
-
-			// CUSTOM EXPLODE BUTTON
-			"<button class=\'explodeButton\' type=\'button\' onclick=\"explode(\'" + 
-			Array.from(value.title.replace(/[^a-zA-Z ]/g,'').split(" "))+ 
-			"\')\"> Try it </button>" + 
-
-			"</p>" + 
-			// ARTICLE END
-			"</article>");
-			count++;
-			if (count == 6){
-				return false;
-			}
-		});
-}
-
-function updateURL(urlOfArticle){
-				var popUp = $(".popUp");
-				popUp.innerHTML = urlOfArticle;
-}
-
+// iterates through the JSON item, extracts data and adds to HTML site
 function addArticles(JSONObjectList){
 	var count = 0;
 	var articleSectionObj = $(".articleSection");
@@ -142,8 +91,6 @@ function addArticles(JSONObjectList){
 		var button = document.createElement("BUTTON");
 		var i = document.createElement("I");
 		var url = value.url;
-
-
 
 		img.setAttribute("class", "articleImg");
 		img.setAttribute("src", value.urlToImage);
@@ -177,24 +124,13 @@ function addArticles(JSONObjectList){
 			popUp.append(iFrame);
 			overlay();
 
-			// iFrame.scrollTo(100,0);
 			popUp.fadeIn("slow");
-			// body.style.display = "block";
 
-			// $(".popUp").mouseleave(hidePopUp);
 			popUp.mouseout(function(){
 				$('.popUp').empty();
 				popUp.fadeOut("slow");
-
-				// console.log("CLEARING FROM POPUP MOUSEOUT");
-				// popUp.innerHTML = "";
-				// console.log("TESTETESTTE");
-				// document.getElementById("#overlay").style.display = "none";
 				hideOverlay();
 				 }) };
-
-
-		// button.innerHTML = "TRY";
 
 		article.setAttribute("class", "article");
 
@@ -214,8 +150,7 @@ function addArticles(JSONObjectList){
 	});
 }
 
-
-
+// iterates through JSON object and pulls image URLs
 function addPictures(JSONObjectList){
 		var count = 0;
 		var videoSectionObj = $( "#images" );
@@ -240,15 +175,16 @@ function addPictures(JSONObjectList){
 
 		})
 }
+// makes a request to the API for url-specific API
 function loadArticles() {
 	$.getJSON(url).done(function( data ){
-		NYT = data;
+		JSONData = data;
 		console.log(data);
 		addArticles(data);
 	});
 
 	$.getJSON(url2).done(function( data ){
-		NYT = data;
+		JSONData = data;
 		console.log(data);
 		addArticles(data);
 
@@ -258,33 +194,25 @@ function loadArticles() {
 
 function loadMoreArticles() {
 	$.getJSON(url3).done(function( data ){
-		NYT = data;
+		JSONData = data;
 		console.log(data);
-		// addTitlesToArticleSection(data);
 		addArticles(data);
-		// $.each(data.items, function(i, item) {
-		// 	console.log(data.items[i]);
-		// });
 	});
 
 };
 
 function loadMoreArticles2() {
 	$.getJSON(url4).done(function( data ){
-		NYT = data;
+		JSONData = data;
 		console.log(data);
-		// addTitlesToArticleSection(data);
 		addArticles(data);
-		// $.each(data.items, function(i, item) {
-		// 	console.log(data.items[i]);
-		// });
 	});
 
 };
 
 function loadPictures(){
 	$.getJSON(url).done(function( data ){
-		NYTPics = data;
+		JSONDataPics = data;
 		addPictures(data);
 			});
 }
