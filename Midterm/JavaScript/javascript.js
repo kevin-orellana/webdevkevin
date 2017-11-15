@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("#menuSection").mouseleave(function(){
 			$("#menuSection").fadeOut("shlow")
 		});
+	$("#sizeFont").click(function () {
+		console.log("increasing");
+		$(".articleContent").css("font-size", "15px");
+	});
 
 	loadArticles();
 	loadPictures();
