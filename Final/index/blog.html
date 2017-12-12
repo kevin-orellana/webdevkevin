@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet" href="../CSS/style.css">
+	<script type="text/javascript" src="../JavaScript/jquery-3.2.1.js">
+	</script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+    <script src="https://use.fontawesome.com/e46ded5775.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+    <script src="https://use.fontawesome.com/e46ded5775.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+
+    <!-- HTML site icon -->
+    <head>
+  <link rel="shortcut icon" type="image/x-icon" href="../media/images/logo.png" />
+</head>
+	
+</head>
+<body>
+
+	<div id="myModal">
+		<div class="background">
+		</div>
+		<div id="modalBody">
+			<h2> Search results </h2>
+		</div>
+
+	</div>
+
+		<div>
+        <ul id="sideMenu">
+            <li class="menuLink" id="Section0Btn"><a href="main.html" alt="Link to blog page"> Home</a></li>
+            <li class="menuLink" id="Section1Btn"><a href="main.html" alt="Link to blog page"> About</a></li>
+            <li class="menuLink" id="Section2Btn"><a href="main.html" alt="Link to blog page"> Experience</a></li>
+            <li class="menuLink" id="Section3Btn"><a class="menuLink" href="main.html" alt="Link to blog page"> Get in touch</a></li>
+            <li class="menuLink" id="Section4Btn"><a href="blog.html" alt="Link to blog page"> Blog</a></li>
+        </ul>
+    </div>
+    <div class="wrapper2">
+    	<a href="main.html">
+		    <img src="../media/images/logo.png" alt="Logo image" style=" position:absolute; z-index: 2;top: -40px;left: 35px;z-index: 4; width: 70px; height: 70px;	">
+		</a>
+
+	 <!-- Start -->
+	  <div class="controls">
+	  		   <label>Filter: </label>
+
+        <button class="filter" data-filter=".TECH">TECH</button>
+        <button class="filter" data-filter=".CULTURE">CULTURE</button>
+        <button class="filter" data-filter=".POLITICS">POLITICS</button>
+        <button class="filter" data-filter=".BUSINESS">BUSINESS</button>
+<!--         <button id="reset">Reset</button> -->
+        <!-- sort buttons -->
+        <label>Sort: </label>
+        <button class="sort" data-sort="default">Featured</button>
+        <button class="sort" data-sort="myorder:asc">Most recent</button>
+       <!--  <button class="sort" data-sort="myorder:desc">Descending</button> -->
+       <!--  <button class="sort" data-sort="random">Random</button> -->
+         <div class="search">
+    	<form>
+		 Search:<br>
+		  <input id="searchQuery" type="text" name="search query" value="">
+		  <br>
+		</form>
+		<button id="searchButton" onclick="search();"><i class="fa fa-search" aria-hidden="true" ></i>
+		</button>
+    </div>
+    </div>
+
+    <!-- The container and content to sort -->
+	<div class="container" id="Container" style="float: right; width: 85%;">
+   <!-- Fail Message Div Here  -->
+    	<div class="fail-message"><span>No Items were found matching the current filters</span></div>
+    <div class="mix TECH" data-myorder="1"> 
+    	<a class="postLink" href="theglobalitsector.html" alt="post">
+    		The Global IT Sector
+    		<div class="post">Growing demand for cloud-based technology services continued to drive employment gains last month in the U.S. information-technology sector, offsetting declines in telecommunications, data processing, hosting and related services, according to IT trade group CompTIA.
+				The U.S. IT sector added a total of 10,300 new jobs last month, up from 9,600 in July, led by gains in IT and software services, as well as an upswing in demand for computer manufacturers, CompTIA says.
+				Employers providing IT and software services added 8,000 new jobs, while computer, electronics and semiconductor manufacturing firms added 3,900, more than double the rate from the prior month.
+				The results are based on an analysis of the latest Bureau of Labor Statistics data, released Friday.
+				Across the economy, nonfarm payrolls rose 156,000 in August, ​a slowdown from the past two months, pushing the unemployment rate up ​to 4.4%, from a 16-year low, the Labor Department reported.
+				By contrast, the unemployment rate for IT jobs stood at 2.5% last month, according to CompTIA.
+				“IT services have powered tech sector job growth all year,” Tim Herbert, the group’s senior vice president of research and market intelligence, said in a statement. That upward trend is likely to continue, he said, adding that the question is whether gains in IT and software services “will offset losses in telecom to achieve projected net job growth on the year.”
+				Telecommunications firms shed 2,700 jobs last month, compared to a loss of 100 jobs in July.
+				Demand for IT workers outside of the tech sector also saw gains last month, increasing by 101,000 new jobs, following declines in July, CompTIA reported.
+				Job postings for IT project managers rose by 1,300 from the prior month. Fewer employers were looking for software developers, computer systems engineers and computer systems analysts, CompTIA said.
+				Article written by WallStreetJournal.</div>
+    	</a>
+    </div>
+    <div class="mix TECH" data-myorder="1"> 
+    	<a class="postLink" href="chineselifeandmobilepaymentboom.html" alt="post">
+    		Chinese Life and Mobile Payment Boom
+    		<div class="post">Chinese mobile payments were nearly 50 times greater than those in the US last year, market data show, highlighting Chinese internet companies’ strong position in a market segment viewed as a gateway to the fintech ecosystem. 
+				The rise of Chinese mobile payments has been driven by the explosive growth of online shopping as well as internet financial services such as peer-to-peer lending and online money market funds. More than half of all mutual funds in China are now sold online, up from only 5 per cent in 2012.
+				Last year was also a turning point for the use of online payments at physical retailers, including supermarkets, restaurants and clothing shops. Starbucks announced in January that it would begin accepting WeChat Pay — the payments service linked to Tencent’s ubiquitous mobile messaging app — at its China stores. Growth was also robust in 2016 in online to offline services such as ride hailing and food delivery apps that customers pay for through via platforms. 
+				“Digital payment platforms remain a critical part of the underlying fintech infrastructure in China but are also an important source of transaction and financial data that is increasingly being leveraged by the payment companies for new fintech platforms, products and services,” said Zennon Kapron, principal at Kapronasia, a Shanghai-based fintech consultancy. 
+				The value of Chinese third-party mobile payments more than tripled to Rmb38tn ($5.5tn) in 2016, according to estimates by iResearch in China. WeChat Pay and Alipay, the payment service operated by Ant Financial, an affiliate of Alibaba Group, dominate the market. In the US, mobile payments rose 39 per cent to $112bn, according to global firm Forrester Research, with the market dispersed among rival groups including Apple, Google, Samsung and PayPal. 
+				Article written by Financial Times.</div>
+    	</a>
+    </div>
+
+    <div class="mix POLITICS" data-myorder="2">
+    	<a class="postLink" href="venezuelaasachinesesatellite.html" alt="post">
+    		Venezuela as a Chinese Satellite
+    		<div class="post">The Venezuelan and Chinese economies seem like they could hardly have less in common. The Venezuelan government of Nicolás Maduro has looted the state-run oil company Petróleos de Venezuela (PDVSA) to pay for the “Bolivarian revolution,” the socialist movement begun under the late leader Hugo Chávez. With oil prices down, the country is unable even to repair rigs or pay workers to generate income, and the government now faces the prospect of a mass uprising. Meanwhile, half a globe away, China’s gleaming malls stand in stark contrast to Venezuela’s empty shelves. But Venezuela’s ruinous state has more to do with China than one might think — specifically, with Chinese President Xi Jinping’s plan for expanding China’s global influence through financial diplomacy. Venezuela’s collapse is about to serve as an object lesson on that plan’s high costs for China’s erstwhile partners — and ultimately for China itself. Within a few years of Chávez assuming power in 1999, China, seeing in the new leader an ideological ally, began increasing lending to Venezuela. By 2006, the Chávez regime’s debt levels had become worrying enough that then-World Bank President Paul Wolfowitz, referring to Venezuela, noted that “there is a real risk of seeing countries which have benefited from debt relief become heavily indebted once more.” Officially, lending from Beijing comes without strings or concerns about nonfinancial matters. The reality is more nuanced. No one doubts Beijing cares little for niceties such as human rights, environmental protection, and anti-corruption when working abroad. Until recently, even geopolitical flag planting was relatively unimportant to Chinese technocrats. But there was still a hard-edged focus on Chinese interests. The driving motivation of Chinese investment and lending since 2000 has been an obsession with opening up new export markets and securing access to natural resources. China’s interests in gaining friends in the Western Hemisphere while securing access to oil overlapped with Venezuela’s interest in diversifying its customer base away from the United States. But that overlap of interests doesn’t mean China has ever offered any sort of discount on its loans. China lent at exorbitant rates to Venezuela. Now, China refuses to renegotiate those debts, even as the South American country’s economy and oil industry crater. Article written by Foreign Policy.</div>
+    	</a>
+    </div>
+    <div class="mix POLITICS" data-myorder="2">
+
+    	<a class="postLink" href="main.html" alt="post">
+    		You're part of the electorate. Act like it.
+    		<div class="post">TEXT 5 GOES HERE</div>
+    	</a>
+    </div>
+
+    <div class="mix CULTURE" data-myorder="3">
+    	<a class="postLink" href="main.html" alt="post">
+    		The urban American Dream
+    		<div class="post">TEXT 4 GOES HERE</div>
+    	</a>
+    </div>
+    <div class="mix CULTURE" data-myorder="3">
+
+    	<a class="postLink" href="main.html" alt="post">
+    		Teaching our children about the post-Fact era
+    		<div class="post">TEXT 5 GOES HERE</div>
+    	</a>
+    </div>
+
+    <div class="mix TECH BUSINESS" data-myorder="4">
+    	<a class="postLink" href="main.html" alt="post">
+    		What will the cloud mean for the IT sector?
+    		<div class="post">TEXT GOES HERE</div>
+    	</a>
+    </div>
+    <div class="mix TECH BUSINESS" data-myorder="4">
+    	<a class="postLink" href="main.html" alt="post">
+    		Taxing robots
+    		<div class="post">TEXT 2 GOES HERE</div>
+    </div>
+
+    <div class="mix TECH POLITICS" data-myorder="5">
+    	<a class="postLink" href="main.html" alt="post">
+    		Ethical Data Science research
+    		<div class="post">TEXT GOES HERE</div>
+    	</a>
+    </div>
+    <div class="mix TECH POLITICS" data-myorder="5">
+    	<a class="postLink" href="main.html" alt="post">
+    		Net Neutrality and Democracy
+    		<div class="post">TEXT 2 GOES HERE</div>
+    </div>
+
+    <div class="mix TECH BUSINESS POLITICS" data-myorder="6">
+    	<a class="postLink" href="main.html" alt="post">
+			Silicon Valley and Washington
+			<div class="post">TEXT GOES HERE</div>
+    	</a>
+    </div>
+    <div class="mix TECH BUSINESS POLITICS" data-myorder="6">
+
+    	<a class="postLink" href="main.html" alt="post">
+    		The Third World and Technological Entrepreneurship
+    		<div class="post">TEXT 2 GOES HERE</div>
+    </div>
+    
+   <!-- invisible divs that help with the spacing when sorted  -->
+    <div class="gap"></div>
+    <div class="gap"></div>
+</div>
+</div>
+
+
+  	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../JavaScript/jquery.mixitup.min.js"></script>
+
+   
+
+    <!-- <script type="text/javascript" src="../JavaScript/mixitup.js"></script> -->
+    <script type="text/javascript" src="../JavaScript/blogJavascript.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+</body>
+</html>
